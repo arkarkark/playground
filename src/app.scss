@@ -1,3 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+body {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+img.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+h1.desc {
+  color: #ffffff;
+}
+
+div.vis {
+  border: 1px solid #ffeeff;
+  padding: 0.5em;
+}
+
+.ui-resizable-helper {
+  border: 2px dotted #00F;
+}

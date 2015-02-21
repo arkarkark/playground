@@ -1,20 +1,30 @@
 doctype html
-html ng-app="Playground"
+html ng-app="Playground" ng-controller="ResizeController as resizeController"
   head
     title Playground
-    link href="/snip.css" rel="stylesheet"
+    link href="/app.css" rel="stylesheet"
     script src="/vendor.js"
     script src="/app.js"
 
   body
     h1 Playground
 
-    .row
-      .col-sm-4
-        p one
+    div.ui-widget-content ark-resizable="{}" Hello World
 
-      .col-sm-4
-        p two
 
-      .col-sm-4
-        p three
+    .row ng-repeat="row in resizeController.rows"
+      div.vis [
+        ng-repeat="col in row"
+        ng-class="'col-sm-' + col.width"
+        ng-style="{height: col.height}"
+        ark-resizable="{disabled: $last, row: row, index: $index}"
+      ]
+        img.background [
+          ng-src="http://lorempixel.com/400/400/cats/{{col.cat}}"
+          width="100%"
+          height="100%"
+        ]
+        h1.desc
+          | width {{col.width}}
+        h1.desc
+          | height {{col.height}}

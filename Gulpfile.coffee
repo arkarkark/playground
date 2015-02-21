@@ -20,6 +20,7 @@ argv = yargs.argv
 bowerJavaScript = [
   'underscore/underscore.js'
   'jquery/dist/jquery.js'
+  'jquery-ui/jquery-ui.js'
   'bootstrap/dist/js/bootstrap.js'
   'angular/angular.js'
   'angular-resource/angular-resource.js'
@@ -37,6 +38,8 @@ vendorJavaScript = [
 
 bowerCss = [
   'angular-busy/dist/angular-busy.css'
+  'jquery-ui/themes/base/all.css'
+  'jquery-ui/themes/base/resizable.css'
 ]
 
 swallowError = (err) ->
@@ -86,7 +89,7 @@ gulp.task 'css', ->
     .pipe(sourcemaps.write())
 
   eventStream.concat(bowerFiles, sassFiles)
-    .pipe(concat('snip.css'))
+    .pipe(concat('app.css'))
     .pipe(gulp.dest("dist"))
 
 gulp.task 'build', ['coffee', 'slim', 'bower:js', 'css', 'icons']

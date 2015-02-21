@@ -4,3 +4,4 @@ Gulpfile.js
 vendor
 .sass-cache
 dist
+src/*.js
