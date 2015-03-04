@@ -1,6 +1,7 @@
 doctype html
 html ng-app="Playground" ng-controller="ResizeController as resizeController"
   head
+    meta charset="UTF-8"
     title Playground
     link href="/app.css" rel="stylesheet"
     script src="/vendor.js"
@@ -9,10 +10,135 @@ html ng-app="Playground" ng-controller="ResizeController as resizeController"
   body
     h1 Playground
 
-    div.ui-widget-content ark-resizable="{}" Hello World
+    .row
+      .col-md-4 style="height: 400px;"
+        .vis
+          .vis-header-note-and-wrapper
+            .vis-header
+              h2 whut
+            .vis-wrapper-container
+              .vis-wrapper-inner-container
+                .vis-wrapper
+            .vis-note
+              .vis-note-container
+                .one-line-expando
+                  .one-line-expando-container.oneline
+                    .one-line-expando-inner-container
+                      .control
+                        span.text-muted
+                          | […]
+                      span.one-line-expando-contents
+                        span.text-muted
+                          | jdsfhkjsgfdkjetshku4rhkutrhkugrhgkufhgkusfdhgkuthkughtkughtkuhtgbkuthnbkuthbkthgkuthkughtkusbtnkubtnkbutnkbtunktbhtkuhtbkubhtkuhbtkbuth
+                            hello
+                            world
+
+      .col-md-4 style="height: 400px;"
+        .vis
+          .vis-header-note-and-wrapper
+            .vis-header
+              h2 whut
+            .vis-wrapper-container
+              .vis-wrapper-inner-container
+                .vis-wrapper
+            .vis-note
+              .vis-note-container
+                .one-line-expando
+                  .one-line-expando-container
+                    .one-line-expando-inner-container
+                      span.one-line-expando-contents
+                        span.text-muted
+                          | jdsfhkjsgfdkjetshku4rhkutrhkugrhgkufhgkusfdhgkuthkughtkughtkuhtgbkuthnbkuthbkthgkuthkughtkusbtnkubtnkbutnkbtunktbhtkuhtbkubhtkuhbtkbuth
+                            hello
+                            world
+
+      .col-md-4 style="height: 400px;"
+        .vis
+          .vis-header-note-and-wrapper
+            .vis-header
+              h2 whut
+            .vis-wrapper-container
+              .vis-wrapper-inner-container
+                .vis-wrapper
+            .vis-note
+              .vis-note-container
+                .one-line-expando
+                  .one-line-expando-container
+                    .one-line-expando-inner-container
+                      span.one-line-expando-contents
+                        span.text-muted
+                          | jdsfhkjsgfdkjetshku4rhkutrhkugrhgkufhgkusfdhgkuthkughtkughtkuhtgbkuthnbkuthbkthgkuthkughtkusbtnkubtnkbutnkbtunktbhtkuhtbkubhtkuhbtkbuth
+                            hello
+                            world
+                            hello
+                            world
+                            hello
+                            world
+                            hello
+                            world
+                            hello
+                            world
+                            hello
+                            world
+
+    .row
+      .col-md-12
+        br
+        .vis-note
+          .one-line-expando
+            .one-line-expando-container.oneline
+              .one-line-expando-inner-container
+                .control
+                  span.text-muted
+                    | […]
+                span.one-line-expando-contents
+                  | jds
+
+        br
+        .vis-note
+          .one-line-expando
+            .one-line-expando-container.oneline
+              .one-line-expando-inner-container
+                .control
+                  span.text-muted
+                    | […]
+                span.one-line-expando-contents
+                  | jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd
+                    YWQERUITOAHDHGKjds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd jds jjgfh jhgfd jhfdg jhdgf jfdgh jgfdjh gfdhj hjgfd hjgfdhjfgd
+
+          br
+
+          .vis-note
+            .one-line-expando
+              .one-line-expando-container
+                .one-line-expando-inner-container
+                  span.one-line-expando-contents
+                    | jdsfhkjsgfdkjetshku4rhkutrhkugrhgkufhgkusfdhgkuthkughtkughtkuhtgbkuthnbkuthbkthgkuthkughtkusbtnkubtnkbutnkbtunktbhtkuhtbkubhtkuhbtkbuth
+                      yes   ^  ^
+                      now  > .. <
+
+          br
+          .vis-note
+            .one-line-expando
+              .one-line-expando-container
+                .one-line-expando-inner-container
+                  span.one-line-expando-contents
+                    | jdsfhkjsgfdkjetshku4rhkutrhkugrhgkufhgkusfdhgkuthkughtkughtkuhtgbkuthnbkuthbkthgkuthkughtkusbtnkubtnkbutnkbtunktbhtkuhtbkubhtkuhbtkbuth
+                      yes   ^  ^
+                      now  > .. <
+                      yes   ^  ^
+                      now  > .. <
+                      yes   ^  ^
+                      now  > .. <
+                      yes   ^  ^
+                      now  > .. <
+                      yes   ^  ^
+                      now  > .. <
+                      yes   ^  ^
+                      now  > .. <
 
 
-    .row ng-repeat="row in resizeController.rows"
+    / .row ng-repeat="row in resizeController.rows"
       div.vis [
         ng-repeat="col in row"
         ng-class="'col-sm-' + col.width"
@@ -28,3 +154,6 @@ html ng-app="Playground" ng-controller="ResizeController as resizeController"
           | width {{col.width}}
         h1.desc
           | height {{col.height}}
+
+
+    .row
