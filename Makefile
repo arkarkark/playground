@@ -1,10 +1,10 @@
 dev:
-	echo http://localhost:4545/
+	echo http://localhost:4646/
 	./node_modules/gulp/bin/gulp.js &
-	@cd dist; python -m SimpleHTTPServer 4545 2>/dev/null
+	@cd dist; python -m SimpleHTTPServer 4646 2>/dev/null
 
 setup:
-	mkdir -p dist
+	mkdir -p dist vendor
 	npm install
-	bower install
+	./node_modules/bower/bin/bower install
 	curl -s -o vendor/live.js http://www.livejs.com/live.js

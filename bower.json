@@ -1,11 +1,11 @@
 {
-  "name": "snippy",
+  "name": "playground",
   "version": "0.0.1",
-  "homepage": "https://github.com/arkarkark/resize",
+  "homepage": "https://github.com/arkarkark/playground",
   "authors": [
     "Alex W (wtwf.com)"
   ],
-  "description": "Resize some stuff on a grid layout",
+  "description": "development playground",
   "main": "app.yaml",
   "license": "MIT",
   "private": true,
@@ -14,7 +14,6 @@
     "angular-bootstrap": "~0.12.0",
     "angular-qrcode": "~5.1.0",
     "angular-resource": "~1.3.9",
-    "angular-ui-grid": "~3.0.0-rc.16",
     "bootstrap": "~3.3.1",
     "bootstrap-sass-official": "~3.3.3",
     "fontawesome": "~4.3.0",

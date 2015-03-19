@@ -10,7 +10,7 @@ ngAnnotate = require 'gulp-ng-annotate'
 rename = require 'gulp-rename'
 run = require 'gulp-run'
 sass = require 'gulp-ruby-sass'
-slim = require 'gulp-slim'
+slm = require 'gulp-slm'
 sourcemaps = require 'gulp-sourcemaps'
 notify = require 'gulp-notify'
 yargs = require 'yargs'
@@ -70,7 +70,12 @@ gulp.task 'slim', ->
       path.dirname = path.dirname.replace(/^(html|js)(\/|$)/, '')
       path
     ))
-    .pipe(slim(pretty: true))
+    .pipe(slm({}))
+    .pipe(gulp.dest('dist'))
+  fs.writeFile('dist/touch.js', "touched = '#{new Date().toString()}';\n")
+
+gulp.task 'static', ->
+  gulp.src(('src/**/*.@(gif|ico|png|jpg)'))
     .pipe(gulp.dest('dist'))
 
 gulp.task 'icons', ->
@@ -92,12 +97,13 @@ gulp.task 'css', ->
     .pipe(concat('app.css'))
     .pipe(gulp.dest("dist"))
 
-gulp.task 'build', ['coffee', 'slim', 'bower:js', 'css', 'icons']
+gulp.task 'build', ['coffee', 'slim', 'bower:js', 'css', 'icons', 'static']
 
 gulp.task 'watch', ->
   gulp.watch 'src/**/*.coffee', ['coffee']
   gulp.watch 'src/**/*.slim', ['slim']
   gulp.watch 'src/**/*.scss', ['css']
+  gulp.watch 'src/**/*.@(gif|ico|png|jpg)', ['static']
 
 gulp.task 'dev', ['build', 'watch']
 

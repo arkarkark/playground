@@ -2,7 +2,7 @@
 
 A super simple app using the following technologies. Intended as a starter for future projects or quickly playing with some ui tests.
 
-   * [Slim](http://slim-lang.com/)
+   * [Slm](https://github.com/slm-lang/slm)
    * [CoffeeScript](http://coffeescript.org/)
    * [Sass](http://sass-lang.com/)
    * [Gulp](http://gulpjs.com/)
@@ -26,3 +26,7 @@ open 'http://localhost:4545/'
 ## TODO
 
   * Add karma test support
+
+## Credits
+
+favicon from: [here](http://www.clker.com/clipart-map-symbols-playground-white.html)

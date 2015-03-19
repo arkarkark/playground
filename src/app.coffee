@@ -1,5 +1,10 @@
 app = angular.module('Playground', [
   'ui.bootstrap'
-  'Resize'
-  'Resizable'
 ])
+
+angular.module('Playground').controller('PlaygroundController', ($scope) ->
+  $scope.message = 'hello'
+  @controllerMessage = 'from Controller'
+
+  @ # must be last
+)
